@@ -20,8 +20,10 @@ making it suitable for future feature expansion.
 
 **Frontend**
 
-* React.js
-* Material UI (MUI)
+* JavaScript
+* JS
+* ejs
+* HTML
 * CSS
 
 **Backend**
