@@ -13,6 +13,8 @@ making it suitable for future feature expansion.
 *  Clean and responsive UI
 *  Fast performance
 *  Modular component structure
+*  Database relationships & schema design
+*  Rating & review system
 
 ---
 
@@ -43,8 +45,6 @@ making it suitable for future feature expansion.
 
 The following features are currently under development and will be added soon:
 
-* 🗄️ Database relationships & schema design
-* ⭐ Rating & review system
 * 🔐 Authentication & authorization system
 * 👤 User accounts and profiles
 * 🏷️ Property filtering & sorting
