@@ -10,8 +10,9 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/User.js");
 
-const listings = require("./routes/listing.js");
-const reviews = require("./routes/review.js");
+const listingsRouter = require("./routes/listing.js");
+const reviewsRouter = require("./routes/review.js");
+const userRouter = require("./routes/user.js");
 
 let port = 8080;
 main().then((res)=>{
@@ -67,20 +68,22 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req,res,next)=>{
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
+  res.locals.currUser = req.user;
   next();
 })
 
-app.get("/demoUser",async(req,res) =>{
-  const fakeUser = new User({
-    username:"donal_01",
-    email:"donal01@gmail.com",
-  })
-  let registeredUser = await User.register(fakeUser,"poiuytre");
-  res.send(registeredUser);
-})
+// app.get("/demoUser",async(req,res) =>{
+//   const fakeUser = new User({
+//     username:"donal_01",
+//     email:"donal01@gmail.com",
+//   })
+//   let registeredUser = await User.register(fakeUser,"poiuytre");
+//   res.send(registeredUser);
+// })
 
-app.use("/listings",listings);
-app.use("/listings/:id/reviews",reviews);
+app.use("/listings",listingsRouter);
+app.use("/listings/:id/reviews",reviewsRouter);
+app.use("/",userRouter);
 
 
 //if the requested route is not matching with any route

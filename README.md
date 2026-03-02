@@ -1,6 +1,6 @@
 # 🏠 NestAway
 
-NestAway is a modern web application designed to help users discover, explore, and manage accommodation listings with ease. 
+NestAway is a modern web application designed to help users discover, explore, and manage accommodation listings with ease.
 The platform focuses on clean UI, smooth user experience, and scalable architecture,
 making it suitable for future feature expansion.
 
