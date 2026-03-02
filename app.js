@@ -41,10 +41,10 @@ app.listen(port, () => {
   console.log(`server is listening to port ${port} 🔥`);
 });
 
-app.get("/",(req,res)=>{
-    console.log("Response");
-    res.send("RRRRrrrr")
-})
+// app.get("/",(req,res)=>{
+//     console.log("Response");
+//     res.send("RRRRrrrr")
+// })
 
 
 
